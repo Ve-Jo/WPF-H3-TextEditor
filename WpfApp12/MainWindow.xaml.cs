@@ -93,5 +93,10 @@ namespace WpfApp12
                 }
             }
         }
+
+        private void ResetFormatting(object sender, RoutedEventArgs e)
+        {
+            richTextBox.Selection.ClearAllProperties();
+        }
     }
 }

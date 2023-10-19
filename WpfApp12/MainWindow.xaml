@@ -5,17 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp12"
         mc:Ignorable="d"
-        Title="Google Chrome" Height="250" Width="400">
+        Title="Блокнот" Height="250" Width="400">
     <Grid>
-        <RichTextBox x:Name="richTextBox" Margin="0,27,0,0" />
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0">
             <Button Content="Bold" Click="ToggleBold" />
             <Button Content="Italic" Click="ToggleItalic" />
             <Button Content="Underline" Click="ToggleUnderline" />
             <Button Content="Font Color" Click="ChangeFontColor" />
             <ComboBox x:Name="FontFamilyComboBox" Width="150" SelectionChanged="ChangeFontFamily" />
             <ComboBox x:Name="FontSizeComboBox" Width="50" SelectionChanged="ChangeFontSize" />
-        </StackPanel>
+            <Button Content="Reset Formatting" Click="ResetFormatting" />
+        </WrapPanel>
+
+        <RichTextBox x:Name="richTextBox" Grid.Row="1" Margin="0,5,0,0" />
     </Grid>
 </Window>
 
