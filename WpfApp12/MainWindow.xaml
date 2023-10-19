@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp12"
+        mc:Ignorable="d"
+        Title="Google Chrome" Height="250" Width="400">
+    <Grid>
+        <RichTextBox x:Name="richTextBox" Margin="0,27,0,0" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button Content="Bold" Click="ToggleBold" />
+            <Button Content="Italic" Click="ToggleItalic" />
+            <Button Content="Underline" Click="ToggleUnderline" />
+            <Button Content="Font Color" Click="ChangeFontColor" />
+            <ComboBox x:Name="FontFamilyComboBox" Width="150" SelectionChanged="ChangeFontFamily" />
+            <ComboBox x:Name="FontSizeComboBox" Width="50" SelectionChanged="ChangeFontSize" />
+        </StackPanel>
+    </Grid>
+</Window>
+
+
+
